@@ -1,0 +1,25 @@
+﻿export default function sitemap() {
+  return [
+    { url: 'https://actioncardetailing.ca/', lastModified: new Date(), changeFrequency: 'weekly', priority: 1.0 },
+    { url: 'https://actioncardetailing.ca/ceramic-coating/', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: 'https://actioncardetailing.ca/window-tinting/', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: 'https://actioncardetailing.ca/paint-protection-film/', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: 'https://actioncardetailing.ca/auto-detailing/', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: 'https://actioncardetailing.ca/paint-correction-polishing/', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://actioncardetailing.ca/dent-repair/', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://actioncardetailing.ca/car-detailing/', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://actioncardetailing.ca/booking/', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    { url: 'https://actioncardetailing.ca/about-us/', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: 'https://actioncardetailing.ca/giftcard/', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: 'https://actioncardetailing.ca/services/', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://actioncardetailing.ca/testimonials/', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
+    { url: 'https://actioncardetailing.ca/references/', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
+    { url: 'https://actioncardetailing.ca/fusion-plus-lite/', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://actioncardetailing.ca/fusion-plus-paint-ppf/', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://actioncardetailing.ca/fusion-plus-premium/', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://actioncardetailing.ca/fusion-plus-wheel-caliper/', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: 'https://actioncardetailing.ca/fusion-plus-glass/', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: 'https://actioncardetailing.ca/fusion-plus-plastic-trims/', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: 'https://actioncardetailing.ca/fusion-plus-upholstery/', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+  ];
+}
