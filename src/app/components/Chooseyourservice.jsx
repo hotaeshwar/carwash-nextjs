@@ -230,9 +230,9 @@ const ChooseYourService = () => {
               Buy Gift
             </button>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-3 sm:mb-4" style={{ color: '#1393c4' }}>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-3 sm:mb-4" style={{ color: '#1393c4' }}>
             CHOOSE YOUR SERVICE
-          </h2>
+          </h1>
           <div className="w-32 sm:w-40 h-1.5 sm:h-2 rounded-full mx-auto mb-4 sm:mb-6" style={{ background: 'linear-gradient(to right, #1393c4, #1580b0)' }}></div>
           <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-4" style={{ color: '#1393c4' }}>
             Transform your vehicle with our premium detailing services

@@ -405,6 +405,7 @@ For inquiries, please contact us at actioncardetailing@gmail.com
                                 src={formImage}
                                 alt="Car detailing service"
                                 className="max-w-full rounded-lg shadow-lg"
+                                loading="lazy"
                             />
                         </div>
                     </div>
@@ -623,6 +624,7 @@ For inquiries, please contact us at actioncardetailing@gmail.com
                         src={formImage}
                         alt="Car detailing service"
                         className="max-w-full h-auto rounded-lg shadow-lg mx-auto"
+                        loading="lazy"
                     />
                 </div>
             </div>

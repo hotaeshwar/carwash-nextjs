@@ -68,6 +68,13 @@ export const metadata = {
   },
 };
 
+export const viewport = {
+  themeColor: '#1393c4',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export default function RootLayout({ children }) {
   return (
     <html
