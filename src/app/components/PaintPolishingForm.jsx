@@ -11,9 +11,22 @@ import { collection, getDocs, query } from 'firebase/firestore';
 const actionCarLogo = '/images/action car logo.png';
 
 // PDF Generation Function using jsPDF
-const generatePDF = (bookingData, selectedVehicle, selectedPackage, selectedAddOns, selectedDate, selectedTime, bookingId, getTotalPrice) => {
+const generatePDF = async (bookingData, selectedVehicle, selectedPackage, selectedAddOns, selectedDate, selectedTime, bookingId, getTotalPrice) => {
   const doc = new jsPDF();
   let yPos = 20;
+
+  try {
+    const loadImage = (src) => new Promise((resolve, reject) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = () => resolve(img);
+      img.onerror = reject;
+    });
+    const logoImg = await loadImage('/images/actioncarlogo.png');
+    doc.addImage(logoImg, 'PNG', 10, 5, 40, 20); // Add logo at top-left
+  } catch (e) {
+    console.error('Failed to load logo', e);
+  }
 
   // Header
   doc.setFontSize(24);
@@ -537,7 +550,7 @@ const PaintPolishingForm = () => {
   const generateAndDownloadPDF = async (bookingId) => {
     setIsGeneratingPDF(true);
     try {
-      generatePDF(bookingData, selectedVehicle, selectedPackage, selectedAddOns, selectedDate, selectedTime, bookingId, getTotalPrice);
+      await generatePDF(bookingData, selectedVehicle, selectedPackage, selectedAddOns, selectedDate, selectedTime, bookingId, getTotalPrice);
       return true;
     } catch (error) {
       console.error('Error generating PDF:', error);

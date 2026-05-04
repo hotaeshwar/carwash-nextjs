@@ -257,12 +257,25 @@ const Booking = ({ isModal = false, blockedDates = [] }) => {
     return `ACD-DET-REF${randomNum}`;
   };
 
-  const downloadPDF = (bookingId) => {
+  const downloadPDF = async (bookingId) => {
     const doc = new jsPDF();
     const blue = [19, 147, 196];
     const dark = [51, 51, 51];
     const total = calculateTotalCost();
     let y = 20;
+
+    try {
+      const loadImage = (src) => new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = () => resolve(img);
+        img.onerror = reject;
+      });
+      const logoImg = await loadImage('/images/actioncarlogo.png');
+      doc.addImage(logoImg, 'PNG', 10, 5, 40, 20); // Add logo at top-left
+    } catch (e) {
+      console.error('Failed to load logo', e);
+    }
 
     const drawLine = () => {
       doc.setDrawColor(...blue);
@@ -543,7 +556,7 @@ Passion for Detail
     try {
       const emailResult = await sendEmail(newBookingId);
       if (emailResult.success) {
-        downloadPDF(newBookingId);
+        await downloadPDF(newBookingId);
         alert(`Booking submitted successfully!\n\nYour booking ID is: ${newBookingId}\n\nConfirmation email has been sent and PDF has been downloaded.\n\nWe will confirm your appointment within 24 hours.`);
         setSelectedVehicle(null);
         setSelectedPackage(null);

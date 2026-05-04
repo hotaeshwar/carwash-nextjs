@@ -18,9 +18,22 @@ import { db } from '../../firebase';
 import { collection, getDocs, query } from 'firebase/firestore';
 
 // PDF Generation Function using jsPDF
-const generatePDF = (claimId, formData, selectedDate, selectedTime) => {
+const generatePDF = async (claimId, formData, selectedDate, selectedTime) => {
   const doc = new jsPDF();
   let yPos = 20;
+
+  try {
+    const loadImage = (src) => new Promise((resolve, reject) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = () => resolve(img);
+      img.onerror = reject;
+    });
+    const logoImg = await loadImage('/images/actioncarlogo.png');
+    doc.addImage(logoImg, 'PNG', 10, 5, 40, 20); // Add logo at top-left
+  } catch (e) {
+    console.error('Failed to load logo', e);
+  }
 
   // Add Logo (if you want to add image, you'll need to convert to base64 or use URL)
   doc.setFontSize(18);
@@ -422,7 +435,7 @@ const RemediationClaim = () => {
   const generateAndDownloadPDF = async (claimId) => {
     setIsGeneratingPDF(true);
     try {
-      generatePDF(claimId, formData, selectedDate, selectedTime);
+      await generatePDF(claimId, formData, selectedDate, selectedTime);
       return true;
     } catch (error) {
       console.error('Error generating PDF:', error);
