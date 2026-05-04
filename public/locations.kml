@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+	<Document>
+		<name>Locations for Action Car Detailing. </name>
+		<atom:author>
+			<atom:name>Action Car Detailing</atom:name>
+		</atom:author>
+		<atom:link rel="related" href="https://actioncardetailing.ca" />
+		<Folder>
+			<Placemark>
+				<name><![CDATA[Action Car Detailing]]></name>
+				<address><![CDATA[1380 Sargent avenue, Winnipeg, MB, R3E 0G5, Winnipeg, R3E 0G5, Canada]]></address>
+				<phoneNumber><![CDATA[2047750005]]></phoneNumber>
+				<description><![CDATA[Action Car Detailing is a leading provider of car detailing services in Winnipeg, offering premium solutions for both interior and exterior vehicle care. We specialize in XPEL Paint Protection Film Winnipeg(PPF) and Fusion Plus ceramic coating winnipeg, delivering the best auto ceramic coating for long-lasting shine and protection. Our expert auto detailing winnipeg and interior detailing in winnipeg services are designed for those searching for vehicle detailing near me, ensuring top-quality results and complete vehicle transformation.]]></description>
+				<Point>
+					<coordinates>-97.1989679,49.8974928,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+	</Document>
+</kml>
