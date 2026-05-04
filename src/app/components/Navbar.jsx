@@ -152,6 +152,23 @@ const Navbar = () => {
                         </div>
                       </>
                     ) : link.internal ? (
+                      <Link
+                        href={link.to}
+                        className={`mafia-nav-link text-xs ${isLinkActive(link.to, link.exact) ? 'active-nav' : ''}`}
+                      >
+                        <span>{link.name}</span>
+                      </Link>
+                    ) : (
+                      <a
+                        href={link.to}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mafia-nav-link text-xs"
+                      >
+                        <span>{link.name}</span>
+                      </a>
+                    )}
+                  </div>
                 ))}
               </div>
 
