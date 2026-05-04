@@ -1,7 +1,5 @@
-'use client';
-
-import Home from '../page';
+import { notFound } from 'next/navigation';
 
 export default function CatchAll() {
-  return <Home />;
+  notFound();
 }

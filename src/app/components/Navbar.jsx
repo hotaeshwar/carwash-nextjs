@@ -87,8 +87,8 @@ const Navbar = () => {
             <div className="flex items-center justify-between h-28 sm:h-32 md:h-36 lg:h-28 xl:h-32 relative px-2 sm:px-3 md:px-4">
 
               {/* Logo - Left side */}
-              {/* ✅ CHANGED: onClick navigate → router.push */}
-              <div className="flex-shrink-0 transform transition-transform hover:scale-105 cursor-pointer z-10 lg:w-80 lg:flex lg:justify-start lg:-ml-4 min-w-0 flex items-center mr-6 lg:mr-10 xl:mr-14" onClick={() => router.push('/')}>
+              {/* ✅ CHANGED: Link replaces div for SEO */}
+              <Link href="/" className="flex-shrink-0 transform transition-transform hover:scale-105 cursor-pointer z-10 lg:w-80 lg:flex lg:justify-start lg:-ml-4 min-w-0 flex items-center mr-6 lg:mr-10 xl:mr-14">
                 <Image
                   className="h-16 sm:h-20 md:h-24 lg:h-20 xl:h-24 w-auto filter drop-shadow-lg max-w-[140px] xs:max-w-[160px] sm:max-w-[180px] md:max-w-[220px] lg:max-w-[240px] xl:max-w-[280px] object-contain"
                   src={actionCarLogo}
@@ -105,7 +105,7 @@ const Navbar = () => {
                   height={80}
                   priority={true}
                 />
-              </div>
+              </Link>
 
               {/* Desktop Navigation - Centered */}
               <div className="hidden lg:flex items-center justify-center space-x-0.5 xl:space-x-1 flex-1 min-w-0 z-50">

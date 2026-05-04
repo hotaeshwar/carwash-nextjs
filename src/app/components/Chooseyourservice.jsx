@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import Image from 'next/image';
 import { Gift } from 'lucide-react';
 
@@ -131,10 +132,14 @@ const ChooseYourService = () => {
     const isActive = activeCard === title;
 
     return (
-      <div
+      <Link
         key={title}
-        className="group cursor-pointer bg-white rounded-xl text-center transition-all duration-300 border border-gray-100 hover:border-blue-200 hover:shadow-xl transform hover:-translate-y-1"
-        onClick={(e) => handleClick(e, title)}
+        href={serviceData.linkTo || '#'}
+        className="group block cursor-pointer bg-white rounded-xl text-center transition-all duration-300 border border-gray-100 hover:border-blue-200 hover:shadow-xl transform hover:-translate-y-1"
+        onClick={(e) => {
+           if (!serviceData.linkTo) e.preventDefault();
+           handleClick(e, title);
+        }}
         onMouseEnter={(e) => {
           e.currentTarget.style.backgroundColor = '#1393c4';
           const heading = e.currentTarget.querySelector('h3');
@@ -204,7 +209,7 @@ const ChooseYourService = () => {
         {isSmallScreen && isActive && (
           <div className="absolute inset-0 border-4 border-blue-400 rounded-xl pointer-events-none animate-pulse"></div>
         )}
-      </div>
+      </Link>
     );
   };
 
