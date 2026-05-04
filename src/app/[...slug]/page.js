@@ -11,10 +11,11 @@ const validRoutes = [
   'quality-service'
 ];
 
-export default function CatchAll({ params }) {
-  const slug = params?.slug?.[0];
+export default async function CatchAll({ params }) {
+  const resolvedParams = await params;
+  const slug = resolvedParams?.slug?.[0];
   
-  if (validRoutes.includes(slug)) {
+  if (slug && validRoutes.includes(slug)) {
     return <Home />;
   }
   
