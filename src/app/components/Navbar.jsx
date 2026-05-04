@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter, usePathname } from 'next/navigation';
 
 // ✅ CHANGED: No imports - images served from /public folder
@@ -88,15 +89,21 @@ const Navbar = () => {
               {/* Logo - Left side */}
               {/* ✅ CHANGED: onClick navigate → router.push */}
               <div className="flex-shrink-0 transform transition-transform hover:scale-105 cursor-pointer z-10 lg:w-80 lg:flex lg:justify-start lg:-ml-4 min-w-0 flex items-center mr-6 lg:mr-10 xl:mr-14" onClick={() => router.push('/')}>
-                <img
+                <Image
                   className="h-16 sm:h-20 md:h-24 lg:h-20 xl:h-24 w-auto filter drop-shadow-lg max-w-[140px] xs:max-w-[160px] sm:max-w-[180px] md:max-w-[220px] lg:max-w-[240px] xl:max-w-[280px] object-contain"
                   src={actionCarLogo}
                   alt="Action Car Detailing Logo"
+                  width={280}
+                  height={96}
+                  priority={true}
                 />
-                <img
+                <Image
                   className="h-20 sm:hidden w-auto ml-2 opacity-90 object-contain"
                   src={awardLogo}
                   alt="Consumer Choice Award 2026 - 3 Year Winner"
+                  width={80}
+                  height={80}
+                  priority={true}
                 />
               </div>
 
