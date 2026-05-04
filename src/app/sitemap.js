@@ -21,5 +21,10 @@ export default function sitemap() {
     { url: 'https://actioncardetailing.ca/fusion-plus-premium', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.64 },
     { url: 'https://actioncardetailing.ca/fusion-plus-upholstery', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.64 },
     { url: 'https://actioncardetailing.ca/fusion-plus-wheel-caliper', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.64 },
+    { url: 'https://actioncardetailing.ca/paint-polishing', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.64 },
+    { url: 'https://actioncardetailing.ca/quality-service', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.64 },
+    { url: 'https://actioncardetailing.ca/choose-your-service', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.64 },
+    { url: 'https://actioncardetailing.ca/perfect-solutions', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.64 },
+    { url: 'https://actioncardetailing.ca/date-blocking', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.1 },
   ];
 }

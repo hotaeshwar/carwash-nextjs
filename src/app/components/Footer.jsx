@@ -137,6 +137,9 @@ const Footer = () => {
         <Link href="/window-tinting">Window Tinting</Link>
         <Link href="/quality-service">Quality Service</Link>
         <Link href="/paint-polishing">Paint Polishing</Link>
+        <Link href="/choose-your-service">Choose Your Service</Link>
+        <Link href="/perfect-solutions">Perfect Solutions</Link>
+        <Link href="/date-blocking">Date Blocking</Link>
       </nav>
     </footer>
   );
