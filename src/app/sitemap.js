@@ -9,6 +9,8 @@ export default function sitemap() {
     { url: 'https://actioncardetailing.ca/window-tinting', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://actioncardetailing.ca/ceramic-coating', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://actioncardetailing.ca/paint-protection-film', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.80 },
+    { url: 'https://actioncardetailing.ca/remediation-claim', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.80 },
+    { url: 'https://actioncardetailing.ca/before-after', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://actioncardetailing.ca/testimonials', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://actioncardetailing.ca/references', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://actioncardetailing.ca/booking', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.64 },
@@ -21,5 +23,10 @@ export default function sitemap() {
     { url: 'https://actioncardetailing.ca/fusion-plus-premium', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.64 },
     { url: 'https://actioncardetailing.ca/fusion-plus-upholstery', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.64 },
     { url: 'https://actioncardetailing.ca/fusion-plus-wheel-caliper', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.64 },
+    { url: 'https://actioncardetailing.ca/quality-service', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.64 },
+    { url: 'https://actioncardetailing.ca/paint-polishing', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.64 },
+    { url: 'https://actioncardetailing.ca/choose-your-service', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.64 },
+    { url: 'https://actioncardetailing.ca/perfect-solutions', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.64 },
+    { url: 'https://actioncardetailing.ca/date-blocking', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.64 },
   ];
 }
