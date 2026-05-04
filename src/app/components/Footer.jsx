@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
 
@@ -109,6 +110,34 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      
+      {/* Hidden SEO Sitemap Links to guarantee 100% crawler discovery of all pages */}
+      <nav aria-label="SEO Sitemap" className="sr-only">
+        <Link href="/">Home</Link>
+        <Link href="/about-us">About Us</Link>
+        <Link href="/auto-detailing">Auto Detailing</Link>
+        <Link href="/booking">Booking</Link>
+        <Link href="/car-detailing">Car Detailing</Link>
+        <Link href="/ceramic-coating">Ceramic Coating</Link>
+        <Link href="/dent-repair">Dent Repair</Link>
+        <Link href="/fusion-plus-glass">Fusion Plus Glass</Link>
+        <Link href="/fusion-plus-lite">Fusion Plus Lite</Link>
+        <Link href="/fusion-plus-paint-ppf">Fusion Plus Paint PPF</Link>
+        <Link href="/fusion-plus-plastic-trims">Fusion Plus Plastic Trims</Link>
+        <Link href="/fusion-plus-premium">Fusion Plus Premium</Link>
+        <Link href="/fusion-plus-upholstery">Fusion Plus Upholstery</Link>
+        <Link href="/fusion-plus-wheel-caliper">Fusion Plus Wheel Caliper</Link>
+        <Link href="/giftcard">Gift Card</Link>
+        <Link href="/paint-correction-polishing">Paint Correction Polishing</Link>
+        <Link href="/paint-protection-film">Paint Protection Film</Link>
+        <Link href="/remediation-claim">Remediation Claim</Link>
+        <Link href="/references">References</Link>
+        <Link href="/services">Services</Link>
+        <Link href="/testimonials">Testimonials</Link>
+        <Link href="/window-tinting">Window Tinting</Link>
+        <Link href="/quality-service">Quality Service</Link>
+        <Link href="/paint-polishing">Paint Polishing</Link>
+      </nav>
     </footer>
   );
 };

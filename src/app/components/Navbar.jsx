@@ -110,68 +110,48 @@ const Navbar = () => {
               {/* Desktop Navigation - Centered */}
               <div className="hidden lg:flex items-center justify-center space-x-0.5 xl:space-x-1 flex-1 min-w-0 z-50">
                 {navLinks.map((link) => (
-                  <div key={link.name} className="relative" ref={link.name === 'SERVICES' ? dropdownRef : null}>
+                  <div key={link.name} className="relative group" ref={link.name === 'SERVICES' ? dropdownRef : null}>
                     {link.hasDropdown ? (
-                      <button
-                        onClick={toggleServicesDropdown}
-                        className={`mafia-nav-link flex items-center text-xs ${
-                          serviceItems.some(item => isServiceActive(item.to)) ? 'active-nav' : ''
-                        }`}
-                      >
-                        <span>{link.name}</span>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className={`h-3 w-3 inline ml-1 transition-transform duration-300 ${servicesDropdownOpen ? 'rotate-180' : ''}`}
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
+                      <>
+                        <button
+                          onClick={toggleServicesDropdown}
+                          className={`mafia-nav-link flex items-center text-xs ${
+                            serviceItems.some(item => isServiceActive(item.to)) ? 'active-nav' : ''
+                          }`}
                         >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </button>
-                    ) : link.internal ? (
-                      // ✅ CHANGED: NavLink → Next.js Link
-                      <Link
-                        href={link.to}
-                        className={`mafia-nav-link text-xs ${isLinkActive(link.to, link.exact) ? 'active-nav' : ''}`}
-                      >
-                        <span>{link.name}</span>
-                      </Link>
-                    ) : (
-                      <a
-                        href={link.to}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mafia-nav-link text-xs"
-                      >
-                        <span>{link.name}</span>
-                      </a>
-                    )}
-
-                    {/* Desktop Service Dropdown */}
-                    {link.name === 'SERVICES' && servicesDropdownOpen && (
-                      <div className="vivid-ozone-dropdown absolute mt-2 w-56 lg:w-60 xl:w-64 rounded-md shadow-2xl overflow-hidden z-20">
-                        <div className="py-1">
-                          {serviceItems.map((service) => (
-                            // ✅ CHANGED: NavLink → Next.js Link
-                            <Link
-                              key={service.name}
-                              href={service.to}
-                              onClick={() => {
-                                setServicesDropdownOpen(false);
-                                setIsMenuOpen(false);
-                              }}
-                              className={`service-menu-item w-full text-left block px-4 py-3 text-sm text-white transition-all duration-200 border-l-4 border-transparent ${
-                                isServiceActive(service.to) ? 'active-service-item' : ''
-                              }`}
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
+                          <span>{link.name}</span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className={`h-3 w-3 inline ml-1 transition-transform duration-300 ${servicesDropdownOpen ? 'rotate-180' : 'group-hover:rotate-180'}`}
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </button>
+                        {/* Desktop Service Dropdown - ALWAYS IN DOM for SEO, hidden via CSS until hover/click */}
+                        <div className={`vivid-ozone-dropdown absolute mt-2 w-56 lg:w-60 xl:w-64 rounded-md shadow-2xl overflow-hidden z-20 transition-all duration-300 ${servicesDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible group-hover:opacity-100 group-hover:visible'}`}>
+                          <div className="py-1">
+                            {serviceItems.map((service) => (
+                              <Link
+                                key={service.name}
+                                href={service.to}
+                                onClick={() => {
+                                  setServicesDropdownOpen(false);
+                                  setIsMenuOpen(false);
+                                }}
+                                className={`service-menu-item w-full text-left block px-4 py-3 text-sm text-white transition-all duration-200 border-l-4 border-transparent ${
+                                  isServiceActive(service.to) ? 'active-service-item' : ''
+                                }`}
+                              >
+                                {service.name}
+                              </Link>
+                            ))}
+                          </div>
                         </div>
-                      </div>
-                    )}
-                  </div>
+                      </>
+                    ) : link.internal ? (
                 ))}
               </div>
 
