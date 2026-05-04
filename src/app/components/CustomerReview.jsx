@@ -30,9 +30,9 @@ const CustomerReview = () => {
       <div className="w-full min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-4 px-2 sm:py-6 sm:px-4 md:py-8 md:px-6 lg:py-12 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3 md:mb-4" style={{ color: '#1393c4' }}>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3 md:mb-4" style={{ color: '#1393c4' }}>
               Customer Reviews
-            </h1>
+            </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl px-4" style={{ color: '#1393c4' }}>
               See what our customers have to say about us
             </p>

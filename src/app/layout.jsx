@@ -1,4 +1,4 @@
-﻿import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import ChatBot from "./components/ChatBot";
@@ -48,6 +48,7 @@ export const metadata = {
       "Expert car wash, PPF, ceramic coating & window tinting in Winnipeg.",
     images: ["https://actioncardetailing.ca/og-image.jpg"],
   },
+  keywords: ["car detailing Winnipeg", "ceramic coating", "paint protection film", "PPF", "window tinting", "car wash", "auto detailing", "Action Car Detailing"],
   robots: {
     index: true,
     follow: true,
@@ -56,9 +57,6 @@ export const metadata = {
       follow: true,
       "max-image-preview": "large",
     },
-  },
-  verification: {
-    google: "your-google-search-console-code",
   },
   icons: {
     icon: [

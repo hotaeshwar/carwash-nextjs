@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState, useEffect, lazy, Suspense } from 'react';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
@@ -8,10 +8,11 @@ import DateBlockingManager from './components/DateBlockingManager';
 
 const actionCarLogo = '/images/actioncarlogo.png';
 
-const Hero = lazy(() => import('./components/Hero'));
-const Service = lazy(() => import('./components/Service'));
-const CustomerReview = lazy(() => import('./components/CustomerReview'));
-const ContactForm = lazy(() => import('./components/ContactForm'));
+import Hero from './components/Hero';
+import Service from './components/Service';
+import CustomerReview from './components/CustomerReview';
+import ContactForm from './components/ContactForm';
+
 const GiftCard = lazy(() => import('./components/GiftCard'));
 const Aboutus = lazy(() => import('./components/Aboutus'));
 const References = lazy(() => import('./components/References'));
@@ -144,8 +145,6 @@ function HomeInner() {
     if (pathname === '/about' || pathname === '/home' || pathname === '/index.html') return false;
     return !validRoutes.includes(pathname);
   };
-
-  if (!isClient) return <LoadingSpinner />;
 
   if (is404Route()) {
     return (
